@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macbeth Quiz - Who Wants to Be Homework Free?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Placeholder for "Who Wants to Be a Millionaire" emblem -->
+        <div class="logo-container">
+            <img src="images/homework.png" alt="Who Wants to Be Homework Free Emblem" id="emblem">
+        </div>
+
+        <h1>Macbeth Quiz</h1>
+         <!-- Money Tree (Reward) -->
+            <div class="money-tree">
+                <ul id="money-tree-list">
+                    <li>NO HOMEWORK</li>
+                    <li>Free Snack</li>
+                    <li>Extra 10 minutes break</li>
+                    <li>Pick The Next Player</li>
+                </ul>
+            </div>
+
+            <!-- Lifelines area -->
+            <div class="centered-container">
+                <div class="lifelines-container">
+                    <div class="lifeline" id="phone" onclick="phoneAFriend()"></div>
+                    <div class="lifeline" id="ask" onclick="askTheClass()"></div>
+                    <div class="lifeline" id="fifty" onclick="fiftyFifty()"></div>
+                </div>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div id="timer" class="timer"></div>
+
+        <div class="game-area">
+            <!-- Question area -->
+            <div class="question-container">
+                <p id="question">Do you want to play?</p>
+            </div>
+
+            <!-- Options area -->
+            <div class="options-container">
+                <button class="option" id="option1" onclick="checkAnswer(0)">A. yes</button>
+                <button class="option" id="option2" onclick="checkAnswer(1)">B. no</button>
+                <button class="option" id="option3" onclick="checkAnswer(2)">C. just want a snack</button>
+                <button class="option" id="option4" onclick="checkAnswer(3)">D. give me snack</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="track1" src="audio/track1.mp3"></audio>
+    <audio id="track2" src="audio/track2.mp3"></audio>
+    <audio id="track3" src="audio/track3.mp3"></audio>
+    <audio id="track4" src="audio/track4.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

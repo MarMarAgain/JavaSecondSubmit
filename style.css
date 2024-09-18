@@ -1,0 +1,182 @@
+/* General layout styles */
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+}
+
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    text-shadow:
+        0 0 5px navy,
+        0 0 10px purple,
+        0 0 20px purple,
+        0 0 40px #0ff,
+        0 0 80px #0ff,
+        0 0 120px #0ff;
+    letter-spacing: 2px;
+}
+
+
+/* Logo Container */
+.logo-container {
+    margin: 20px 0;
+}
+
+#emblem {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+/* Question Container */
+.question-container {
+    margin: 20px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Options Container */
+.options-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.option {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    font-size: 1.2em;
+    width: 45%;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.option:hover {
+    background-color: #333;
+    border-color: blue;
+}
+
+/* Lifelines Container */
+.lifelines-container {
+    margin: 20px 0;
+}
+
+
+/* Money Tree */
+.money-tree {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.money-tree ul {
+    list-style: none;
+    padding: 0;
+}
+
+.money-tree li {
+    margin: 10px 0;
+}
+
+/* Highlight the active part of the money tree */
+.money-tree li.highlighted {
+    background-color: dodgerblue;
+    color: black;
+}
+
+.lifelines-container {
+    display: flex;
+    gap: 10px;
+}
+
+.lifeline {
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    align-content: center;
+}
+
+
+#phone {
+    background-image: url('images/phone.png'); /* Set background image */
+}
+
+#ask {
+    background-image: url('images/class.png'); /* Set background image */
+}
+
+#fifty {
+    background-image: url('images/5050.png');
+}
+
+.lifeline:hover {
+    border-color: deeppink;
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Timer text styling */
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: deeppink;
+    text-shadow:
+        0 0 5px black,
+        0 0 10px navy,
+        0 0 20px black,
+        0 0 120px white;
+
+
+    @media (max-width: 768px) {
+        .money-tree {
+            position: static;
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Ensure the emblem and money tree are stacked */
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+}
