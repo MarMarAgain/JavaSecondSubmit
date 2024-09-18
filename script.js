@@ -66,8 +66,8 @@ const audioTracks = {
     track2: new Audio('audio/track2.mp3'),
     track3: new Audio('audio/track3.mp3'),
     track4: new Audio('audio/track4.mp3'),
-    track5: new Audio('audio/track5.mp3'), // Plays for 50/50
-    track6: new Audio('audio/track6.mp3')  // Plays before track 2
+    track6: new Audio('audio/track6.mp3'), // Plays before track 2
+    track7: new Audio('audio/track7.mp3')  // Plays when player loses
 };
 
 // Variables to track if specific tracks are playing
@@ -162,7 +162,6 @@ function playBackgroundMusic() {
     }
 }
 
-
 // Stop all audio tracks
 function stopAllTracks() {
     Object.values(audioTracks).forEach(track => {
@@ -195,15 +194,14 @@ function checkAnswer(option) {
             } else {
                 stopAllTracks();
                 audioTracks.track4.play(); // Play winning track fully
-                alert("Congratulations! You won " + moneyTree[moneyTree.length - 1] + "!");
-                resetGame();
+                gameOver(true); // Redirect to result.html with a win result
             }
         } else {
             selectedOptionElement.style.backgroundColor = "red"; // Incorrect answer turns red
             setTimeout(() => {
                 stopAllTracks();
-                alert("Sorry, wrong answer! You won " + moneyTree[currentQuestion > 0 ? currentQuestion - 1 : 0] + "!");
-                resetGame();
+                audioTracks.track7.play();
+                gameOver(false); // Redirect to result.html with a loss result
             }, 1000); // Delay the loss message by 1 second
         }
     }, 500); // 0.5 second delay
@@ -226,9 +224,6 @@ function fiftyFifty() {
         optionsToDisable.forEach(optionIndex => {
             document.getElementById("option" + (optionIndex + 1)).style.visibility = "hidden";
         });
-
-        // Play track5 when 50/50 is used
-        audioTracks.track5.play().catch(error => console.error("Error playing track 5: ", error));
 
         lifelines.fiftyFifty = false;
         document.getElementById("fifty").disabled = true;
@@ -270,13 +265,18 @@ function askTheClass() {
                 clearInterval(askTheClassTimer);
                 askTheClassTimer = null;
                 audioTracks.track3.pause(); // Stop timer track
-                alert("Time's up! You didn't pick an answer in time.");
-                resetGame();
+                gameOver(false); // Redirect to result.html with a loss result
             }
         }, 1000); // 1000ms = 1 second
     } else {
         alert("You already used Ask the Class!");
     }
+}
+
+// Function to handle redirection to the results page
+function gameOver(isWin) {
+    const result = isWin ? 'win' : 'lose';
+    window.location.href = `result.html?result=${result}`;
 }
 
 // Reset the game
