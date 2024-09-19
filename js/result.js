@@ -19,6 +19,7 @@ function stopAllTracks() {
 }
 
 // Display the appropriate message based on the result
+
 const messageElement = document.getElementById('message');
 
 if (result === 'lose') {

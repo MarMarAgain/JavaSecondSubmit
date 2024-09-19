@@ -164,27 +164,49 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     color: deeppink;
-    text-shadow:
-        0 0 5px black,
-        0 0 10px navy,
-        0 0 20px black,
-        0 0 120px white;
+    text-shadow: 0 0 5px black,
+    0 0 10px navy,
+    0 0 20px black,
+    0 0 120px white;
+}
 
 
-    @media (max-width: 768px) {
-        .money-tree {
-            position: static;
-            margin-top: 20px;
-            width: 100%;
-            text-align: center;
-        }
-
-        /* Ensure the emblem and money tree are stacked */
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+@media (max-width: 768px) {
+    /* Stack emblem and money tree, and center */
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
+    /* Squeeze the money tree below the emblem */
+    .money-tree {
+        position: static;
+        margin-top: 10px;
+        width: 80%;
+        text-align: center;
+    }
+
+    /* Adjust question container for mobile */
+    .question-container {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    /* Adjust options for mobile */
+    .options-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .option {
+        font-size: 1em;
+        width: 90%;
+        padding: 10px 20px;
+        text-align: center;
+    }
 }
+
+
+
