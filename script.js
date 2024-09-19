@@ -1,8 +1,9 @@
+
 // Questions and answers
 const questions = [
     {
         question: "What is the name of Macbeth's wife?",
-        options: ["Lady Montague", "Lady Capulet", "Lady Macbeth", "Lady Macbethra"],
+        options: ["Lady Montague","Lady Macbeth", "Lady Capulet", "Lady Macbeth", "Lady Macbethra"],
         correct: 2
     },
     {
@@ -52,11 +53,19 @@ const questions = [
     }
 ];
 
+
+// Function to exit the game
+function exitGame() {
+    alert("Thanks for playing! The game will now end.");
+    // Add any logic for exiting (e.g., closing the window, stopping the game)
+    window.close();  // This may not work in all browsers but can be used
+}
+
 // Game state
 let currentQuestion = 0;
 let score = 0;
 let moneyTree = ['Pick The Next Player', 'Extra 10 minutes break', 'Free Snack', 'NO HOMEWORK'];
-let lifelines = { phoneAFriend: true, askTheClass: true, fiftyFifty: true };
+let lifelines = {phoneAFriend: true, askTheClass: true, fiftyFifty: true};
 let askTheClassTimer = null;
 let timeLeft = 30; // Time limit in seconds
 
@@ -284,7 +293,7 @@ function resetGame() {
     currentQuestion = 0;
     score = 0;
     timeLeft = 30;
-    lifelines = { phoneAFriend: true, askTheClass: true, fiftyFifty: true };
+    lifelines = {phoneAFriend: true, askTheClass: true, fiftyFifty: true};
 
     // Re-enable all options and lifelines
     for (let i = 1; i <= 4; i++) {
