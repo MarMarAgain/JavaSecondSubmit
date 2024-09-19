@@ -40,7 +40,7 @@ if (result === 'lose') {
 
 // Function to reload the game
 function playAgain() {
-    window.location.href = 'MacBeth.html';
+    window.location.href = 'index.html';
 }
 
 // Function to exit the game
