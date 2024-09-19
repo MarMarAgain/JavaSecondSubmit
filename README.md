@@ -3,6 +3,9 @@
 ## Overview
 This interactive quiz game is inspired by the classic game show "Who Wants to Be a Millionaire," tailored specifically for students engaged in history and English workshops. The game tests players' knowledge of Shakespeare's *Macbeth* through a series of questions, allowing them to earn points and enjoy a fun learning experience.
 
+![Who Wants To Be Homework Free Logo](https://github.com/user-attachments/assets/e9f96d6c-7f16-4d99-9cfa-16bed339a013)
+
+
 ## Features
 - Engaging quiz format based on *Macbeth*
 - Multiple-choice questions with increasing difficulty
@@ -30,6 +33,9 @@ To ensure the functionality of the game I used
 - Manage Engines Javascript Validator
 
 ### HTML
+No issues detected
+
+![HTML Validator](https://github.com/user-attachments/assets/20391fcc-e7dc-45b8-80fc-68b16d1aeae2)
 
 
 ### CSS
