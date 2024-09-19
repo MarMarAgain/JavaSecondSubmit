@@ -2,7 +2,7 @@
 .container {
     text-align: center;
     font-family: Arial, sans-serif;
-    background-image: url("assets/images/background.jpg");
+    background-image: url("../assets/images/background.jpg");
     background-size: cover;
 }
 
@@ -137,15 +137,15 @@ h1 {
 
 
 #phone {
-    background-image: url('assets/images/phone.png'); /* Set background image */
+    background-image: url('../assets/images/phone.png'); /* Set background image */
 }
 
 #ask {
-    background-image: url('assets/images/class.png'); /* Set background image */
+    background-image: url('../assets/images/class.png'); /* Set background image */
 }
 
 #fifty {
-    background-image: url('assets/images/5050.png');
+    background-image: url('../assets/images/5050.png');
 }
 
 .lifeline:hover {

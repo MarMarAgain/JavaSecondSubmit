@@ -71,12 +71,12 @@ let timeLeft = 30; // Time limit in seconds
 
 // Define audio tracks
 const audioTracks = {
-    track1: new Audio('audio/track1.mp3'),
-    track2: new Audio('audio/track2.mp3'),
-    track3: new Audio('audio/track3.mp3'),
-    track4: new Audio('audio/track4.mp3'),
-    track6: new Audio('audio/track6.mp3'), // Plays before track 2
-    track7: new Audio('audio/track7.mp3')  // Plays when player loses
+    track1: new Audio('assets/audio/track1.mp3'),
+    track2: new Audio('assets/audio/track2.mp3'),
+    track3: new Audio('assets/audio/track3.mp3'),
+    track4: new Audio('assets/audio/track4.mp3'),
+    track6: new Audio('assets/audio/track6.mp3'), // Plays before track 2
+    track7: new Audio('assets/audio/track7.mp3')  // Plays when player loses
 };
 
 // Variables to track if specific tracks are playing
